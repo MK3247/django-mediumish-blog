@@ -24,3 +24,5 @@ def post(request):
 def author(request):
 
     return render(request, 'author.html', {})
+
+    # return render(request, 'author.html', {})
