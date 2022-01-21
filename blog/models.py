@@ -46,7 +46,7 @@ class Post(models.Model):
 
     body = models.TextField()
 
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(upload_to = 'uploads/')
 
     # categories = models.ManyToManyField(Categories)
 
