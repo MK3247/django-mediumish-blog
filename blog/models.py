@@ -18,13 +18,13 @@ class Author(models.Model):
 
         return self.user.username
 
-# class Categories(models.Model):
+class Categories(models.Model):
 
-#     title = models.CharField(max_length=20)
+    title = models.CharField(max_length=20)
 
-#     def __str__(self):
+    def __str__(self):
 
-#         return self.title
+        return self.title
 
 class Post(models.Model):
 
@@ -49,7 +49,7 @@ class Post(models.Model):
 
     thumbnail = models.ImageField(upload_to = 'uploads/')
 
-    # categories = models.ManyToManyField(Categories)
+    categories = models.ManyToManyField(Categories)
 
     publish = models.DateTimeField(default=timezone.now)
 
