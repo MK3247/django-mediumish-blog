@@ -1,4 +1,5 @@
-from email.policy import default
+from django.urls import reverse
+
 from django.db import models
 
 from django.utils import timezone
@@ -50,7 +51,7 @@ class Post(models.Model):
 
     # categories = models.ManyToManyField(Categories)
 
-    publish = models.DateTimeField(auto_now_add=True)
+    publish = models.DateTimeField(default=timezone.now)
 
     created = models.DateTimeField(auto_now_add=True)
 
@@ -66,3 +67,15 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+
+        return reverse(
+            'blog:post_detail',
+            args = [
+                self.publish.year, 
+                self.publish.month,
+                self.publish.day,
+                self.slug
+            ]
+        )
