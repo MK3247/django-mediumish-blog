@@ -1,6 +1,28 @@
 from django.shortcuts import render, get_object_or_404
 
+from django.db.models import Q
+
 from .models import Post
+
+def search(request):
+
+    queryset = Post.objects.all()
+
+    query = request.GET.get('q')
+
+    if query:
+
+        queryset = queryset.filter(
+            Q(title__icontains = query) |
+            Q(body__icontains = query)
+        ).distinct()
+
+    context = {
+        'queryset':queryset
+    }
+
+    return render(request, 'search_result.html', context)
+
 
 def index(request):
 

@@ -8,6 +8,8 @@ urlpatterns = [
 
     path('', views.index, name = 'index'),
 
+    path('search/', views.search, name = 'search'),
+
     path('<int:year>/<int:month>/<int:day>/<slug:post>/', views.post_detail, name = 'post_detail'),
 
     path('author/', views.author, name = 'author'),
