@@ -42,9 +42,7 @@
 				</ul>
 			</div>
 		</div>
-		<!-- End Fixed Left Share -->
-
-		<!-- Begin Post -->
+		
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading">
 
@@ -72,7 +70,7 @@
 			<!-- Begin Post Content -->
 			<div class="article-post">
 				<p>
-					{{post.body}}
+					{{post.body | safe }}
 				</p>
 			</div>
 			<!-- End Post Content -->
@@ -113,7 +111,7 @@
 					<img class="img-fluid img-thumb" src="{{post.thumbnail.url}}" alt="">
 					</a>
 					<div class="card-block">
-						<h2 class="card-title"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+						<h2 class="card-title"><a href="{{post.get_absolute_url}}">{{post.title|truncatewords:15}}</a></h2>
 						<div class="metafooter">
 							<div class="wrapfooter">
 								<span class="meta-footer-thumb">

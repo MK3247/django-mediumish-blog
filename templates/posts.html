@@ -17,7 +17,7 @@
 			</a>
 			<div class="card-block">
 				<h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title |truncatewords:8}}</a></h2>
-				<h4 class="card-text">{{ post.body|truncatewords:45}}</h4>
+				<h4 class="card-text">{{ post.body|truncatewords:18|safe }}</h4>
 				<div class="metafooter">
 					<div class="wrapfooter">
 						<span class="meta-footer-thumb">

@@ -2,11 +2,19 @@ from django.contrib import admin
 
 from .models import Post, Author, Categories
 
+from .forms import *
+
 admin.site.register(Author)
 
 admin.site.register(Categories)
 
-@admin.register(Post)
+# @admin.register(Post)
+
+class BlogAdmin(admin.ModelAdmin):
+
+    form = PostAdminForm
+
+admin.site.register(Post, BlogAdmin)
 
 class PostAdmin(admin.ModelAdmin):
 
