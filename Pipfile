@@ -9,6 +9,7 @@ lint = "*"
 pillow = "*"
 django-tinymce = "*"
 django-taggit = "*"
+readtime = "*"
 
 [dev-packages]
 

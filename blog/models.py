@@ -10,6 +10,8 @@ from django.urls import reverse
 
 from taggit.managers import TaggableManager 
 
+import readtime 
+
 class Author(models.Model):
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
@@ -19,14 +21,6 @@ class Author(models.Model):
     def __str__(self):
 
         return self.user.username
-
-# class Categories(models.Model):
-
-#     title = models.CharField(max_length=20)
-
-#     def __str__(self):
-
-#         return self.title
 
 class Post(models.Model):
 
@@ -68,6 +62,12 @@ class Post(models.Model):
     class Meta:
 
         ordering = ('-publish',)
+
+    def get_readtime(self):
+
+        result = readtime.of_text(self.body)
+
+        return result.text
 
     def __str__(self):
         return self.title
