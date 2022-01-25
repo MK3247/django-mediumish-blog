@@ -10,6 +10,8 @@ urlpatterns = [
 
     path('posts/', views.posts, name = 'posts'),
 
+    path('tag/<slug:tag_slug>/',views.posts, name='post_list_by_tag'),
+
     path('search/', views.search, name = 'search'),
 
     path('<int:year>/<int:month>/<int:day>/<slug:post>/', views.post_detail, name = 'post_detail'),

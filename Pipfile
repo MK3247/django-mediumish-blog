@@ -8,6 +8,7 @@ django = "*"
 lint = "*"
 pillow = "*"
 django-tinymce = "*"
+django-taggit = "*"
 
 [dev-packages]
 

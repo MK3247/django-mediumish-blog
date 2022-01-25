@@ -1,12 +1,10 @@
 from django.contrib import admin
 
-from .models import Post, Author, Categories
+from .models import Post, Author
 
 from .forms import *
 
 admin.site.register(Author)
-
-admin.site.register(Categories)
 
 # @admin.register(Post)
 

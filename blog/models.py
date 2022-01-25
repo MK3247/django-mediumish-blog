@@ -8,6 +8,8 @@ from django.contrib.auth.models import User
 
 from django.urls import reverse
 
+from taggit.managers import TaggableManager 
+
 class Author(models.Model):
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
@@ -18,13 +20,13 @@ class Author(models.Model):
 
         return self.user.username
 
-class Categories(models.Model):
+# class Categories(models.Model):
 
-    title = models.CharField(max_length=20)
+#     title = models.CharField(max_length=20)
 
-    def __str__(self):
+#     def __str__(self):
 
-        return self.title
+#         return self.title
 
 class Post(models.Model):
 
@@ -47,9 +49,11 @@ class Post(models.Model):
 
     body = models.TextField()
 
+    tags = TaggableManager()
+
     thumbnail = models.ImageField(upload_to = 'uploads/')
 
-    categories = models.ManyToManyField(Categories)
+    # categories = models.ManyToManyField(Categories)
 
     publish = models.DateTimeField(default=timezone.now)
 
