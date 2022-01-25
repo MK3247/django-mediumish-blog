@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     # 'tinymce',
 
     'blog',
+
+    'taggit',
 ]
 
 MIDDLEWARE = [
