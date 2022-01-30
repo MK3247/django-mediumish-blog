@@ -20,6 +20,7 @@ How To Use
 ## clone the project and install the requirements 
 
 > Make sure you have already installed python3 and git.
-
+```
 $ git clone https://github.com/MK3247/django-mediumish-blog.git && cd django-mediumish-blog
 $ pipenv install -r requirements.txt
+```
