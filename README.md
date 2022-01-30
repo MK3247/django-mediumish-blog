@@ -24,3 +24,25 @@ How To Use
 $ git clone https://github.com/MK3247/django-mediumish-blog.git && cd django-mediumish-blog
 $ pipenv install -r requirements.txt
 ```
+## Migrate & Collect Static
+```
+$ python manage.py migrate
+$ python manage.py collectstatic
+```
+## Create Admin User
+```
+$ python manage.py createsuperuser
+```
+## Run Server
+```
+$ python manage.py runserver
+```
+> Enter your browser http://localhost:8000/. You can login via admin in http://localhost:8000/admin/.
+
+TODOS
+=
+- Change Style
+- Reply comment
+- Create following system
+- Read later post
+- Like post
