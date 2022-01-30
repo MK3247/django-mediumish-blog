@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/django-2.0%20%7C%202.1%20%7C%202.2-success.svg)](https://djangoproject.com/)
 [![](https://img.shields.io/apm/l/vim-mode.svg)](https://choosealicense.com/licenses/mit/)
 
-Full featured blog using Django Framework
+Mediumish blog using Django Framework
 
 Features
 =
@@ -20,7 +20,6 @@ How To Use
 ## clone the project and install the requirements 
 
 > Make sure you have already installed python3 and git.
-<!-- ```
+
 $ git clone https://github.com/MK3247/django-mediumish-blog.git && cd django-mediumish-blog
 $ pipenv install -r requirements.txt
-``` -->
