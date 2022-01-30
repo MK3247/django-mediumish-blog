@@ -37,7 +37,13 @@ $ python manage.py createsuperuser
 ```
 $ python manage.py runserver
 ```
-> Enter your browser http://localhost:8000/. You can login via admin in http://localhost:8000/admin/.
+> Enter your browser http://localhost:8000/. 
+
+## Add Some Fake Posts
+
+First log in to your admin panel and add some dummy posts 
+
+> You can login via admin in http://localhost:8000/admin/.
 
 TODOS
 =
