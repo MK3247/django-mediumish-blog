@@ -6,13 +6,11 @@ from .forms import *
 
 admin.site.register(Author)
 
-# @admin.register(Post)
+admin.site.site_header = 'Farm Kenya'
 
 class BlogAdmin(admin.ModelAdmin):
 
     form = PostAdminForm
-
-admin.site.register(Post, BlogAdmin)
 
 class PostAdmin(admin.ModelAdmin):
 
@@ -29,3 +27,5 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ('status', 'publish')
 
     date_hierarchy = 'publish'
+
+admin.site.register(Post, BlogAdmin)
